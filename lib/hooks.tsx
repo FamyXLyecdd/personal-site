@@ -245,15 +245,17 @@ export function useThrottle<T extends (...args: any[]) => any>(
 ): T {
     const lastRun = useRef(Date.now())
 
-    return useCallback(
-        ((...args: Parameters<T>) => {
+    const throttled = useCallback(
+        (...args: Parameters<T>) => {
             if (Date.now() - lastRun.current >= delay) {
                 callback(...args)
                 lastRun.current = Date.now()
             }
-        }) as T,
+        },
         [callback, delay]
     )
+
+    return throttled as T
 }
 
 /**

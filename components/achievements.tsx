@@ -240,6 +240,7 @@ export function AchievementProvider({ children }: AchievementProviderProps) {
         if (hour >= 0 && hour < 4) {
             setTimeout(() => unlockAchievement('caffeine_addict'), 5000)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     // Save achievements

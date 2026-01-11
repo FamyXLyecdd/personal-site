@@ -205,7 +205,7 @@ function Hero() {
                         Discover Your Next Adventure
                     </h1>
                     <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                        Explore the world's most beautiful destinations and book your perfect trip today.
+                        Explore the world&apos;s most beautiful destinations and book your perfect trip today.
                     </p>
                 </motion.div>
 

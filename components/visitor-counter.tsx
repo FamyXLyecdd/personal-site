@@ -127,6 +127,7 @@ function AnimatedNumber({ value, duration = 1000 }: { value: number; duration?: 
 
         animationFrame = requestAnimationFrame(animate)
         return () => cancelAnimationFrame(animationFrame)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value, duration])
 
     return <>{formatNumber(displayValue)}</>
