@@ -167,7 +167,7 @@ export function AboutPageContent() {
                                                 </span>
                                                 <span className="text-sm text-muted">{skill.level}%</span>
                                             </div>
-                                            <ProgressBar value={skill.level} max={100} animated />
+                                            <ProgressBar value={skill.level} max={100} />
                                         </motion.div>
                                     ))}
                                 </div>

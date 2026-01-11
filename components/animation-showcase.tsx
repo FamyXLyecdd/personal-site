@@ -19,16 +19,7 @@ import { GlassCard } from '@/components/ui/glass-card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/index'
 import { cn, copyToClipboard } from '@/lib/utils'
-import {
-    stagger,
-    fadeUp,
-    fadeIn,
-    scaleUp,
-    slideIn,
-    spring,
-    smooth,
-    bouncy,
-} from '@/lib/animations'
+
 
 // ========================================
 // ANIMATION CATEGORIES

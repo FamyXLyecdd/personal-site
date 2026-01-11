@@ -260,6 +260,7 @@ function MessagesList() {
                         <Avatar
                             fallback={message.name.slice(0, 2).toUpperCase()}
                             size="md"
+                            alt={message.name}
                         />
                         <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
@@ -354,13 +355,15 @@ function DashboardHeader() {
                     />
                 </div>
 
-                <Button variant="ghost" size="sm" icon={<Bell className="w-4 h-4" />} />
+                <Button variant="ghost" size="sm" icon={<Bell className="w-4 h-4" />}>
+                    <span className="sr-only">Notifications</span>
+                </Button>
 
                 <Button variant="primary" size="sm" icon={<Download className="w-4 h-4" />}>
                     Export
                 </Button>
 
-                <Avatar fallback="YN" size="md" />
+                <Avatar fallback="YN" size="md" alt="User Profile" />
             </div>
         </header>
     )

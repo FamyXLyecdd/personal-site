@@ -6,7 +6,7 @@ const nextConfig = {
         formats: ['image/avif', 'image/webp'],
     },
     experimental: {
-        optimizeCss: true,
+        optimizeCss: false,
     },
 }
 

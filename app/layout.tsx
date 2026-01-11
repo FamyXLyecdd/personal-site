@@ -21,6 +21,7 @@ const inter = Inter({
 // ========================================
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://yourwebsite.com'),
     title: 'YourName | Discord Bot Developer & Python Automation Expert',
     description: '16-year-old developer from the Philippines, specializing in premium Discord bots, Python automation, and web scraping. Making ₱20k/mo building things that don\'t suck.',
     keywords: [

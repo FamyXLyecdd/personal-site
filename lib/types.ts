@@ -6,35 +6,29 @@ export interface Project {
     id: string
     title: string
     description: string
-    shortDescription: string
+    longDescription?: string
     image: string
-    category: string
-    technologies: string[]
-    github: string | null
-    live: string | null
-    featured: boolean
-    stats: Record<string, number>
-    features: string[]
-    testimonials: Array<{ user: string; quote: string; rating: number }>
+    emoji?: string
+    tags: string[]
+    techStack: string[]
+    githubUrl?: string
+    liveUrl?: string
+    featured?: boolean
+    features?: string[]
 }
 
 export interface Skill {
     name: string
-    category: string
     level: number
-    icon: string
-    yearsOfExperience: number
+    color: string
 }
 
 export interface Testimonial {
     id: string
     name: string
-    title: string
-    company: string
+    role: string
     content: string
-    avatar: string
     rating: number
-    flag: string
 }
 
 export interface ProcessStep {

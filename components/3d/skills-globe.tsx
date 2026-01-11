@@ -10,6 +10,8 @@ import {
 } from '@react-three/drei'
 import * as THREE from 'three'
 
+const ThreeLine = 'line' as any
+
 // ========================================
 // SKILLS GLOBE / NETWORK VISUALIZATION
 // ========================================
@@ -269,14 +271,14 @@ function ConnectionLine({
     })
 
     return (
-        <line ref={lineRef as any} geometry={geometry}>
+        <ThreeLine ref={lineRef} geometry={geometry}>
             <lineBasicMaterial
                 color="#0066FF"
                 transparent
                 opacity={highlighted ? 0.1 : 0.2}
                 linewidth={1}
             />
-        </line>
+        </ThreeLine>
     )
 }
 
@@ -364,7 +366,7 @@ function RadarChart({ skills }: { skills: Skill[] }) {
                     new THREE.Vector3(Math.cos(angle) * maxRadius, Math.sin(angle) * maxRadius, 0)
                 ]
                 return (
-                    <line key={`line-${i}`}>
+                    <ThreeLine key={`line-${i}`}>
                         <bufferGeometry>
                             <bufferAttribute
                                 attach="attributes-position"
@@ -374,7 +376,7 @@ function RadarChart({ skills }: { skills: Skill[] }) {
                             />
                         </bufferGeometry>
                         <lineBasicMaterial color="#000000" transparent opacity={0.1} />
-                    </line>
+                    </ThreeLine>
                 )
             })}
 
@@ -390,7 +392,7 @@ function RadarChart({ skills }: { skills: Skill[] }) {
             </mesh>
 
             {/* Radar outline */}
-            <line>
+            <ThreeLine>
                 <bufferGeometry>
                     <bufferAttribute
                         attach="attributes-position"
@@ -400,7 +402,7 @@ function RadarChart({ skills }: { skills: Skill[] }) {
                     />
                 </bufferGeometry>
                 <lineBasicMaterial color="#0066FF" linewidth={2} />
-            </line>
+            </ThreeLine>
 
             {/* Skill points */}
             {radarPoints.map((point, i) => (

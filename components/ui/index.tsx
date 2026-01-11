@@ -9,8 +9,8 @@ import { cn } from '@/lib/utils'
 
 interface BadgeProps {
     children: React.ReactNode
-    variant?: 'default' | 'primary' | 'secondary' | 'outline'
-    size?: 'sm' | 'md'
+    variant?: 'default' | 'primary' | 'secondary' | 'outline' | 'success' | 'warning' | 'error'
+    size?: 'sm' | 'md' | 'lg'
     className?: string
     icon?: React.ReactNode
 }
@@ -20,11 +20,15 @@ const badgeVariants = {
     primary: 'bg-accent-primary/10 border-accent-primary/20 text-accent-primary',
     secondary: 'bg-accent-secondary/10 border-accent-secondary/20 text-accent-secondary',
     outline: 'bg-transparent border-black/[0.15] text-foreground',
+    success: 'bg-green-500/10 border-green-500/20 text-green-500',
+    warning: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-500',
+    error: 'bg-red-500/10 border-red-500/20 text-red-500',
 }
 
 const badgeSizes = {
     sm: 'px-2.5 py-1 text-xs',
     md: 'px-3 py-1.5 text-sm',
+    lg: 'px-4 py-2 text-base',
 }
 
 export function Badge({

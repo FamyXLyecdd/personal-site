@@ -7,7 +7,8 @@ import { GlassCard } from '@/components/ui/glass-card'
 import { Avatar, StarRating } from '@/components/ui/index'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { testimonials, type Testimonial } from '@/lib/data'
+import { testimonials } from '@/lib/data'
+import { type Testimonial } from '@/lib/types'
 
 // ========================================
 // 3D CARD EFFECT
@@ -90,21 +91,14 @@ function TestimonialCard({ testimonial, className, featured }: TestimonialCardPr
                     {/* Author */}
                     <div className="flex items-center gap-3 pt-4 border-t border-black/[0.05]">
                         <Avatar
-                            src={testimonial.avatar}
                             alt={testimonial.name}
                             fallback={testimonial.name.slice(0, 2).toUpperCase()}
                             size="md"
                         />
                         <div>
                             <h4 className="font-semibold text-sm">{testimonial.name}</h4>
-                            <p className="text-xs text-muted">{testimonial.title}</p>
-                            {testimonial.company && (
-                                <p className="text-xs text-accent-primary">{testimonial.company}</p>
-                            )}
+                            <p className="text-xs text-muted">{testimonial.role}</p>
                         </div>
-                        {testimonial.flag && (
-                            <span className="ml-auto text-xl">{testimonial.flag}</span>
-                        )}
                     </div>
                 </div>
             </GlassCard>

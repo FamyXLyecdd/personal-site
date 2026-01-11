@@ -132,7 +132,9 @@ const buttonVariants: ComponentDemo[] = [
         component: (
             <div className="flex gap-3 flex-wrap">
                 <Button variant="ghost">Ghost</Button>
-                <Button variant="ghost" icon={<Settings className="w-4 h-4" />} />
+                <Button variant="ghost" icon={<Settings className="w-4 h-4" />}>
+                    <span className="sr-only">Settings</span>
+                </Button>
             </div>
         ),
     },
@@ -356,10 +358,10 @@ const avatarVariants: ComponentDemo[] = [
         category: 'avatars',
         component: (
             <div className="flex items-center gap-3">
-                <Avatar size="sm" fallback="SM" />
-                <Avatar size="md" fallback="MD" />
-                <Avatar size="lg" fallback="LG" />
-                <Avatar size="xl" fallback="XL" />
+                <Avatar size="sm" fallback="SM" alt="Small Avatar" />
+                <Avatar size="md" fallback="MD" alt="Medium Avatar" />
+                <Avatar size="lg" fallback="LG" alt="Large Avatar" />
+                <Avatar size="xl" fallback="XL" alt="Extra Large Avatar" />
             </div>
         ),
     },
@@ -371,15 +373,15 @@ const avatarVariants: ComponentDemo[] = [
         component: (
             <div className="flex items-center gap-4">
                 <div className="relative">
-                    <Avatar size="lg" fallback="ON" />
+                    <Avatar size="lg" fallback="ON" alt="Online User" />
                     <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border-2 border-white" />
                 </div>
                 <div className="relative">
-                    <Avatar size="lg" fallback="AW" />
+                    <Avatar size="lg" fallback="AW" alt="Away User" />
                     <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-yellow-500 border-2 border-white" />
                 </div>
                 <div className="relative">
-                    <Avatar size="lg" fallback="OF" />
+                    <Avatar size="lg" fallback="OF" alt="Offline User" />
                     <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-gray-400 border-2 border-white" />
                 </div>
             </div>
@@ -392,10 +394,10 @@ const avatarVariants: ComponentDemo[] = [
         category: 'avatars',
         component: (
             <div className="flex -space-x-3">
-                <Avatar size="md" fallback="A" className="border-2 border-white" />
-                <Avatar size="md" fallback="B" className="border-2 border-white" />
-                <Avatar size="md" fallback="C" className="border-2 border-white" />
-                <Avatar size="md" fallback="D" className="border-2 border-white" />
+                <Avatar size="md" fallback="A" alt="Member A" className="border-2 border-white" />
+                <Avatar size="md" fallback="B" alt="Member B" className="border-2 border-white" />
+                <Avatar size="md" fallback="C" alt="Member C" className="border-2 border-white" />
+                <Avatar size="md" fallback="D" alt="Member D" className="border-2 border-white" />
                 <div className="w-10 h-10 rounded-full bg-accent-primary text-white text-xs font-medium flex items-center justify-center border-2 border-white">
                     +5
                 </div>
@@ -495,7 +497,7 @@ const progressVariants: ComponentDemo[] = [
         category: 'progress',
         component: (
             <div className="w-full max-w-md">
-                <ProgressBar value={65} max={100} animated />
+                <ProgressBar value={65} max={100} />
             </div>
         ),
     },

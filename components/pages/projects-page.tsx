@@ -22,7 +22,8 @@ import {
 import { GlassCard } from '@/components/ui/glass-card'
 import { Button } from '@/components/ui/button'
 import { Badge, TechPill } from '@/components/ui/index'
-import { projects, type Project } from '@/lib/data'
+import { projects } from '@/lib/data'
+import { type Project } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 // ========================================
@@ -117,10 +118,14 @@ function ProjectCard({ project, view }: ProjectCardProps) {
 
                             <div className="flex gap-2">
                                 {project.githubUrl && (
-                                    <Button variant="ghost" size="sm" icon={<Github className="w-4 h-4" />} />
+                                    <Button variant="ghost" size="sm" icon={<Github className="w-4 h-4" />}>
+                                        <span className="sr-only">Github</span>
+                                    </Button>
                                 )}
                                 {project.liveUrl && (
-                                    <Button variant="ghost" size="sm" icon={<ExternalLink className="w-4 h-4" />} />
+                                    <Button variant="ghost" size="sm" icon={<ExternalLink className="w-4 h-4" />}>
+                                        <span className="sr-only">Live Demo</span>
+                                    </Button>
                                 )}
                                 <Button variant="primary" size="sm" icon={<ArrowUpRight className="w-4 h-4" />}>
                                     View

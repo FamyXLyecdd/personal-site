@@ -94,7 +94,7 @@ export function useMousePosition(): MousePosition {
     useEffect(() => {
         if (isTouchDevice()) return
 
-        const handleMouseMove = throttle((e: MouseEvent) => {
+        const handleMouseMove = throttle((e: any) => {
             const x = e.clientX
             const y = e.clientY
             const normalizedX = (x / window.innerWidth) * 2 - 1
