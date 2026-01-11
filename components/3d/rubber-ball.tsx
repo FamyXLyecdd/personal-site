@@ -245,7 +245,7 @@ function SpringLine({
     })
 
     return (
-        <line ref={lineRef}>
+        <line ref={lineRef as any}>
             <bufferGeometry />
             <lineBasicMaterial color="#0066FF" opacity={0.3} transparent linewidth={2} />
         </line>
